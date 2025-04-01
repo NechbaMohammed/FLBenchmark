@@ -1,0 +1,8 @@
+flwr[simulation]==1.6.0
+omegaconf
+torch
+torchvision
+datasets
+hydra-core
+scikit-learn
+matplotlib
