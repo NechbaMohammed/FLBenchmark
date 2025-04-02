@@ -55,9 +55,9 @@ def main():
     # Model/backend config
     parser.add_argument("--batch_size", type=int, default=64,
                         help="Batch size for training")
-    parser.add_argument("--num_cpus", type=int, default=1,
+    parser.add_argument("--num_cpus", type=int, default=14,
                         help="Number of CPUs per client")
-    parser.add_argument("--num_gpus", type=float, default=0,
+    parser.add_argument("--num_gpus", type=float, default=1,
                         help="Number of GPUs per client")
     
     args = parser.parse_args()
