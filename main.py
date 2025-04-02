@@ -141,8 +141,8 @@ def main():
 
     # Backend configuration
     backend_config = {
-        "num_cpus": args.num_cpus,
-        "num_gpus": args.num_gpus
+        "num_cpus": 1,
+        "num_gpus": 7
     }
 
     # Parameter combinations to process

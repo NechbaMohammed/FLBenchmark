@@ -4,11 +4,11 @@ import time
 from collections import deque
 from typing import List
 
-MAX_PROCESSES_AT_ONCE = 1
+MAX_PROCESSES_AT_ONCE = 6
 
-rounds =50 # Number of rounds
-epochs = "10 20 40" # List Number of local epochs
-runs = 3 # Number of runs to execute
+rounds =1 #50 # Number of rounds
+epochs = "1"#"10 20 40" # List Number of local epochs
+runs = 1#3 # Number of runs to execute
 num_clients = 10 # for all partitioning except cifar100 
 alpha = 0.5 # for dirichlet partitioning
 segma = 0.1 # for noise partitioning
