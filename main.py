@@ -190,11 +190,14 @@ def main():
 
         # Run multiple independent simulations
         for epoch in epochs:
-            for run in range(1, args.runs + 1):
+            runs = args.runs
+            if epoch!=10:
+                runs = 1
+            for run in range(1, runs + 1):
                 print(f"\n▶︎ {args.partitioning.upper()} Simulation")
                 print(f" - Parameters: {params}")
                 print(f" - Num epochs: {epoch}")
-                print(f" - Run {run}/{args.runs}")
+                print(f" - Run {run}/{runs}")
                 model_dir=f"results/weights/{args.method}/{args.dataset}/{args.partitioning}/epoch{epoch}"
                 if args.partitioning == "label_quantity":
                     model_dir += f"/C{params['labels_per_client']}"

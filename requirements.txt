@@ -1,4 +1,4 @@
-flwr[simulation]==1.6.0
+flwr[simulation]==1.16.0
 omegaconf
 torch
 torchvision
