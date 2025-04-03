@@ -4,7 +4,7 @@ import time
 from collections import deque
 from typing import List
 
-MAX_PROCESSES_AT_ONCE = 1
+MAX_PROCESSES_AT_ONCE = 8
 
 rounds =50 # Number of rounds
 epochs = "10 20 30" # List Number of local epochs
