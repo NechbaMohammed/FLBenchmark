@@ -7,8 +7,8 @@ def get_long_description():
     return long_description
 
 setup(
-    name="flbench-ml",
-    version="0.1.0",  # Update with your version
+    name="fedbench",
+    version="0.1.1",  # Update with your version
     author="Mohammed Nechba",
     author_email="mohammednechba@gmail.com",
     description="A Federated Learning Benchmarking Framework",
