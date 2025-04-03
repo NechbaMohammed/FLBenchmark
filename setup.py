@@ -1,15 +1,18 @@
 from setuptools import setup, find_packages
 
-with open("README.md", "r", encoding="utf-8") as fh:
-    long_description = fh.read()
+def get_long_description():
+    """Read long description from README"""
+    with open("README.md", encoding="utf-8") as f:
+        long_description = f.read()
+    return long_description
 
 setup(
-    name="flbenchmark",
+    name="flbench-ml",
     version="0.1.0",  # Update with your version
     author="Mohammed Nechba",
     author_email="mohammednechba@gmail.com",
     description="A Federated Learning Benchmarking Framework",
-    long_description=long_description,
+     long_description=get_long_description(),
     long_description_content_type="text/markdown",
     url="https://github.com/NechbaMohammed/FLBenchmark",
     packages=find_packages(),
