@@ -1,0 +1,14 @@
+flwr[simulation]==1.16.0
+omegaconf>=2.1.1
+torch>=1.10.0
+torchvision>=0.11.0
+datasets>=1.18.0
+hydra-core>=1.1.1
+scikit-learn>=1.0.0
+matplotlib>=3.5.0
+
+[dev]
+pytest>=6.0.0
+black>=21.0
+flake8>=3.9.0
+isort>=5.0.0
