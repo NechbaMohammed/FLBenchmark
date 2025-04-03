@@ -30,26 +30,18 @@ FLBenchmark provides a comprehensive ecosystem for evaluating federated learning
 - **Multi-dimensional Evaluation**: Comprehensive metrics covering accuracy, efficiency, fairness, and robustness
 - **Decision-Supporting Visualizations**: Analytics tools for identifying optimal algorithm selection criteria
 
-## Quick Start Tutorials
-fedBench's mission is to democratize federated learning by providing researchers and practitioners with an intuitive, flexible, and powerful framework. This comprehensive toolkit allows you to implement, customize, and evaluate federated learning systems with minimal effort.
 
+## Installation
 ```python
-pip install fedbench
+pip install fedbench==0.1.1
 ```
+## Quick Start Tutorials
 0. **The statistics of datasets?**
 
    [![Kaggle](https://img.shields.io/badge/Kaggle-Dataset_Statistics-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nechbamohammed/the-statistics-of-datasets)(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/the-statistics-of-datasets.ipynb))
 
 
-## Direct Repository Usage
 
-```bash
-# Clone the repository
-git clone git@github.com:NechbaMohammed/FLBenchmark.git
-cd FLBenchmark
-# Install dependencies
-pip install -r requirements.txt
-```
 ### Strategic Dataset Selection
 Choose datasets that match your strategic evaluation needs:
 
@@ -168,7 +160,7 @@ FedBench provides pre-configured models for various datasets:
 
 ##### FedAvg on MNIST
 ```python
-from omegaconf import OmegaConf
+from omegaconf import OmegaConf,DictConfig
 import torch
 from fedbench.algorithms.fedavg.simulation import run_fedavg
 
@@ -184,11 +176,11 @@ backend_config = {
     "num_gpus": 0
 }
 
-data_config = {
+data_config = DictConfig({
     "name": "mnist",
     "partitioning": "iid",
     "batch_size": 64,
-}
+})
 
 history = run_fedavg(
     data_config=data_config,
@@ -204,7 +196,7 @@ history = run_fedavg(
 ##### FedProx on CIFAR-10
 
 ```python
-from omegaconf import OmegaConf
+from omegaconf import OmegaConf,DictConfig
 import torch
 from fedbench.algorithms.fedprox.simulation import run_fedprox
 
@@ -220,12 +212,12 @@ backend_config = {
     "num_gpus": 0
 }
 
-data_config = {
+data_config = DictConfig({
     "name": "cifar10",
     "partitioning": "dirichlet",
     "alpha":0.5,
     "batch_size": 32,
-}
+})
 
 history = run_fedprox(
     data_config=data_config,
@@ -243,7 +235,7 @@ history = run_fedprox(
 ##### FedAdam on CIFAR-100
 
 ```python
-from omegaconf import OmegaConf
+from omegaconf import OmegaConf,DictConfig
 import torch
 from fedbench.algorithms.fedadam.simulation import run_fedadam
 
@@ -259,11 +251,11 @@ backend_config = {
     "num_gpus": 0
 }
 
-data_config = {
+data_config = DictConfig({
     "name": "cifar100",
     "partitioning": "iid",
     "batch_size": 32,
-}
+})
 
 history = run_fedadam(
     data_config=data_config,
@@ -281,7 +273,7 @@ history = run_fedadam(
 ##### FedAdagrad on SVHN
 
 ```python
-from omegaconf import OmegaConf
+from omegaconf import OmegaConf,DictConfig
 import torch
 from fedbench.algorithms.fedadagrad.simulation import run_fedadagrad
 
@@ -295,12 +287,12 @@ backend_config = {
             "hidden_dims": [120, 84],
             "num_classes": 10,
         })
-data_config = {
+data_config = DictConfig({
     "name": "svhn",
     "partitioning": "noise",
     "segma":0.1,
     "batch_size": 32,
-}
+})
 
 history = run_fedadagrad(
     data_config=data_config,
@@ -315,7 +307,7 @@ history = run_fedadagrad(
 ```
 ##### FedYogi on CINIC-10
 ```python
-from omegaconf import OmegaConf
+from omegaconf import OmegaConf,DictConfig
 import torch
 from fedbench.algorithms.fedyogi.simulation import run_fedyogi
 
@@ -330,11 +322,11 @@ backend_config = {
     "num_cpus": 1,
     "num_gpus": 0
 }
-data_config = {
+data_config = DictConfig({
     "name": "cinic10",
     "partitioning": "iid",
     "batch_size": 32,
-}
+})
 
 history = run_fedyogi(
     data_config=data_config,
@@ -353,7 +345,7 @@ history = run_fedyogi(
 
 ```python
 from fedbench.algorithms.fednova.simulation import run_fednova
-from omegaconf import OmegaConf
+from omegaconf import OmegaConf,DictConfig
 import torch
 
 backend_config = {
@@ -367,11 +359,11 @@ model_cfg = OmegaConf.create({
             "hidden_dims" : [32, 16, 8] ,
             "num_classes": 2,
         })
-data_config = {
+data_config = DictConfig({
             "name": "fcube",
             "partitioning": "synthetic",
             "batch_size": 64,
-        }
+        })
 history = run_fednova(
     data_config=data_config,
     model_cfg=model_cfg,
@@ -387,7 +379,7 @@ history = run_fednova(
 ```python
 
 from fedbench.algorithms.scaffold.simulation import run_scaffold
-from omegaconf import OmegaConf
+from omegaconf import OmegaConf,DictConfig
 import torch
 
 backend_config = {
@@ -400,12 +392,12 @@ model_cfg = OmegaConf.create({
             "hidden_dims": [120, 84],
             "num_classes": 10,
         })
-data_config = {
+data_config = DictConfig({
     "name": "fedisic2019",
     "partitioning": "iid_noniid",
     "similarity":0.5,
     "batch_size": 32,
-}
+})
 
 
 history = run_scaffold(
@@ -424,7 +416,7 @@ history = run_scaffold(
 
 ```python
 from fedbench.algorithms.moon.simulation import run_moon
-from omegaconf import OmegaConf
+from omegaconf import OmegaConf,DictConfig
 import torch
 
 backend_config = {
@@ -440,11 +432,11 @@ model_cfg = OmegaConf.create({
             "num_classes": 2,
 })
 
-data_config = {
+data_config = DictConfig({
     "name": "adult",
     "partitioning": "iid",
     "batch_size": 64,
-}
+})
 
 history = run_moon(
     data_config=data_config,
@@ -462,7 +454,7 @@ history = run_moon(
 
 ```python
 from fedbench.algorithms.fedbn.simulation import run_fedbn
-from omegaconf import OmegaConf
+from omegaconf import OmegaConf,DictConfig
 import torch
 
 backend_config = {
@@ -475,11 +467,11 @@ backend_config = {
             "hidden_dims": [120, 84],
             "num_classes": 62,
         })
-data_config = {
+data_config = DictConfig({
     "name": "femnist",
     "partitioning": "real-world",
     "batch_size": 32,
-}
+})
 
 
 history = run_fedbn(
