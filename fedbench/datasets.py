@@ -16,7 +16,11 @@ from collections import defaultdict
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from huggingface_hub import login
-
+import matplotlib.pyplot as plt
+from collections import OrderedDict,Counter
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
 class FCubeDataset(Dataset):
     def __init__(self, hf_dataset):
         """
@@ -673,3 +677,112 @@ class NoisyDataset(Dataset):
 
     def __len__(self):
         return len(self.subset)
+
+class DatasetStatistics:
+    def __init__(self, fed_dataset: FederatedDataset):
+        self.fed_dataset = fed_dataset
+    
+    def compute_statistics(self):
+        stats = {}
+        
+        # Global dataset statistics
+        trainset_size = len(self.fed_dataset.trainset)
+        testset_size = len(self.fed_dataset.testset)
+        stats["Total Training Samples"] = trainset_size
+        stats["Total Test Samples"] = testset_size
+        
+        # Client-wise statistics
+        client_stats = {}
+        for i, client_dataset in enumerate(self.fed_dataset.datasets[0]):
+            labels = [label for _, label in client_dataset]
+            label_counts = dict(Counter(labels))
+            client_stats[f"Client {i}"] = {
+                "Num Samples": len(client_dataset),
+                "Label Distribution": label_counts
+            }
+        stats["Client Statistics"] = client_stats
+        
+        # Testset statistics
+        test_labels = [label for _, label in self.fed_dataset.testset]
+        stats["Test Label Distribution"] = dict(Counter(test_labels))
+        
+        return stats
+    
+    def display_statistics(self):
+        stats = self.compute_statistics()
+        print("Dataset Statistics:")
+        for key, value in stats.items():
+            if isinstance(value, dict):
+                print(f"\n{key}:")
+                for sub_key, sub_value in value.items():
+                    print(f"  {sub_key}: {sub_value}")
+            else:
+                print(f"{key}: {value}")
+    
+    def plot_statistics(self, figsize=(20, 15)):
+        """
+        Generate visualizations for the dataset statistics
+        
+        Args:
+            figsize (tuple): Figure size for the plots
+        """
+        stats = self.compute_statistics()
+        
+        # Create a figure with subplots
+        fig = plt.figure(figsize=figsize)
+        
+        # 1. Distribution of samples across clients
+        plt.subplot(2, 2, 1)
+        client_samples = [stats["Client Statistics"][f"Client {i}"]["Num Samples"] 
+                          for i in range(len(stats["Client Statistics"]))]
+        plt.bar(range(len(client_samples)), client_samples)
+        plt.title("Sample Distribution Across Clients")
+        plt.xlabel("Client ID")
+        plt.ylabel("Number of Samples")
+        plt.xticks(range(len(client_samples)), [f"Client {i}" for i in range(len(client_samples))])
+        plt.grid(True, alpha=0.3)
+        
+        # 2. Label distribution in test dataset
+        plt.subplot(2, 2, 2)
+        test_labels = stats["Test Label Distribution"]
+        labels = sorted(test_labels.keys())
+        counts = [test_labels[label] for label in labels]
+        plt.bar(labels, counts)
+        plt.title("Test Dataset Label Distribution")
+        plt.xlabel("Label")
+        plt.ylabel("Count")
+        plt.grid(True, alpha=0.3)
+        
+        # 3. Heatmap of label distribution across clients
+        plt.subplot(2, 1, 2)
+        
+        # Get all unique labels
+        all_labels = set()
+        for client in stats["Client Statistics"].values():
+            all_labels.update(client["Label Distribution"].keys())
+        all_labels = sorted(list(all_labels))
+        
+        # Create a matrix for the heatmap
+        heatmap_data = np.zeros((len(stats["Client Statistics"]), len(all_labels)))
+        
+        # Fill the matrix
+        for i, client_id in enumerate(range(len(stats["Client Statistics"]))):
+            client_key = f"Client {client_id}"
+            client_labels = stats["Client Statistics"][client_key]["Label Distribution"]
+            for j, label in enumerate(all_labels):
+                heatmap_data[i, j] = client_labels.get(label, 0)
+        
+        # Normalize by row (client)
+        row_sums = heatmap_data.sum(axis=1, keepdims=True)
+        heatmap_data_normalized = heatmap_data / row_sums
+        
+        # Plot heatmap
+        sns.heatmap(heatmap_data_normalized, annot=True, fmt=".2f", cmap="YlGnBu",
+                    xticklabels=all_labels, yticklabels=[f"Client {i}" for i in range(len(stats["Client Statistics"]))])
+        plt.title("Normalized Label Distribution Across Clients")
+        plt.xlabel("Label")
+        plt.ylabel("Client")
+        
+        plt.tight_layout()
+        plt.savefig("dataset_statistics.png")
+        plt.show()
