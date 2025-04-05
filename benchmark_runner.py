@@ -77,6 +77,7 @@ for method in methods:
 
 # run max_processes_at_once processes at once with 10 second sleep interval
 # in between those processes until all commands are done
+
 processes: List = []
 while len(commands) > 0:
     while len(processes) < MAX_PROCESSES_AT_ONCE and len(commands) > 0:
