@@ -25,14 +25,48 @@ FLBenchmark provides a comprehensive ecosystem for evaluating federated learning
 
 ## Installation
 ```python
-pip install fedbench==0.1.1
+pip install fedbench
 ```
 ## Quick Start Tutorials
-0. **The statistics of datasets?**
+0. **FedBench: Exploring Dataset Statistics for FL**
 
-   [![Kaggle](https://img.shields.io/badge/Kaggle-Dataset_Statistics-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nechbamohammed/the-statistics-of-datasets)(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/the-statistics-of-datasets.ipynb))
+   [![Kaggle](https://img.shields.io/badge/Kaggle-Dataset_Statistics-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nechbamohammed/fedbench-exploring-dataset-statistics-for-fl)(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/))
 
+1. **FedBench:Benchmarking 9 Algorithms on FashionMNIST**
+ 
+   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_FashionMNIST-20BEFF?logo=kaggle&logoColor=white)]()(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/))
 
+2. **FedBench : Benchmarking 9 Algorithms on MNIST**
+ 
+   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_MNIST-20BEFF?logo=kaggle&logoColor=white)]()(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/))
+
+3. **FedBench : Benchmarking 9 Algorithms on CIFAR-10**
+ 
+   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_CIFAR10-20BEFF?logo=kaggle&logoColor=white)]()(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/))
+
+4. **FedBench : Benchmarking 9 Algorithms on CIFAR-100**
+ 
+   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_CIFAR100-20BEFF?logo=kaggle&logoColor=white)]()(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/))
+
+5. **FedBench: Benchmarking 9 Algorithms on FEDISIC2019**
+ 
+   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_FEDISIC2019-20BEFF?logo=kaggle&logoColor=white)]()(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/))
+
+6. **FedBench: Benchmarking 9 Algorithms on SVHN**
+ 
+   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_SVHN-20BEFF?logo=kaggle&logoColor=white)]()(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/))
+
+7. **FedBench: Benchmarking 9 Algorithms on CINIC10**
+ 
+   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_CINIC10-20BEFF?logo=kaggle&logoColor=white)]()(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/))
+
+8. **FedBench: Benchmarking 9 Algorithms on  FCUBE**
+ 
+   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_FCUBE-20BEFF?logo=kaggle&logoColor=white)]()(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/))
+
+9. **FedBench: Benchmarking 9 Algorithms on FEMNIST**
+ 
+   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_FEMNIST-20BEFF?logo=kaggle&logoColor=white)]()(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/))
 
 ### Strategic Dataset Selection
 Choose datasets that match your strategic evaluation needs:
@@ -501,7 +535,7 @@ python local_epoch_comparison_plots.py
 
 
 
-## Cit📚 Citation
+## 📚 Citation
 If you use FedBench in your research, please cite our paper:ation
 
 ```bibtex
