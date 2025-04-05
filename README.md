@@ -23,14 +23,6 @@ FLBenchmark provides a comprehensive ecosystem for evaluating federated learning
 - **Heterogeneity Impact Assessment**: Measure how different heterogeneity factors affect algorithm performance
 - **Systematic Comparison Methodology**: Ensure fair, reproducible comparisons between federated optimization approaches
 
-## Key Strategic Capabilities
-
-- **Algorithm Portfolio**: Production-ready implementations of 8+ state-of-the-art federated optimization strategies
-- **Heterogeneity Simulation**: Fine-grained control over client data distributions to simulate real-world deployment challenges
-- **Multi-dimensional Evaluation**: Comprehensive metrics covering accuracy, efficiency, fairness, and robustness
-- **Decision-Supporting Visualizations**: Analytics tools for identifying optimal algorithm selection criteria
-
-
 ## Installation
 ```python
 pip install fedbench==0.1.1
