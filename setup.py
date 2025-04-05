@@ -8,10 +8,11 @@ def get_long_description():
 
 setup(
     name="fedbench",
-    version="0.1.1",  # Update with your version
+    version="0.1.2",  # Update with your version
     author="Mohammed Nechba",
     author_email="mohammednechba@gmail.com",
     description="A Federated Learning Benchmarking Framework",
+    package_data={ '': ['logo.png']},  # Include logo.png in the package data
      long_description=get_long_description(),
     long_description_content_type="text/markdown",
     url="https://github.com/NechbaMohammed/FLBenchmark",
