@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://nechbamohammed.github.io/FLBenchmarkUI/">
-    <img src="logo.png" width="140px" alt="FedBench Website" />
+    <img src="https://github.com/NechbaMohammed/FLBenchmarkUI/blob/main/images/logo.png" width="140px" alt="FedBench Website" />
   </a>
 </p>
 <p align="center">
