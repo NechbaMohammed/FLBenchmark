@@ -30,43 +30,47 @@ pip install fedbench
 ## Quick Start Tutorials
 0. **FedBench: Exploring Dataset Statistics for FL**
 
-   [![Kaggle](https://img.shields.io/badge/Kaggle-Dataset_Statistics-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nechbamohammed/fedbench-exploring-dataset-statistics-for-fl)(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/))
+   [![Kaggle](https://img.shields.io/badge/Kaggle-Dataset_Statistics-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nechbamohammed/fedbench-exploring-dataset-statistics-for-fl)(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/fedbench-exploring-dataset-statistics-for-fl))
 
 1. **FedBench:Benchmarking 9 Algorithms on FashionMNIST**
  
-   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_FashionMNIST-20BEFF?logo=kaggle&logoColor=white)]()(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/))
+   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_FashionMNIST-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nechbamohammed/fedbench-benchmarking-9-algorithms-on-fashionmnist)(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/fedbench-benchmarking-9-algorithms-on-fashionmnist))
 
 2. **FedBench : Benchmarking 9 Algorithms on MNIST**
  
-   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_MNIST-20BEFF?logo=kaggle&logoColor=white)]()(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/))
+   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_MNIST-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nechbamohammed/fedbench-benchmarking-9-algorithms-on-mnist)(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/fedbench-benchmarking-9-algorithms-on-mnist))
 
 3. **FedBench : Benchmarking 9 Algorithms on CIFAR-10**
  
-   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_CIFAR10-20BEFF?logo=kaggle&logoColor=white)]()(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/))
+   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_CIFAR10-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nechbamohammed/fedbench-benchmarking-9-algorithms-on-cifar-10)(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/fedbench-benchmarking-9-algorithms-on-cifar-10))
 
 4. **FedBench : Benchmarking 9 Algorithms on CIFAR-100**
  
-   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_CIFAR100-20BEFF?logo=kaggle&logoColor=white)]()(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/))
+   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_CIFAR100-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nechbamohammed/fedbench-benchmarking-9-algorithms-on-cifar-100)(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/fedbench-benchmarking-9-algorithms-on-cifar-100))
 
 5. **FedBench: Benchmarking 9 Algorithms on FEDISIC2019**
  
-   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_FEDISIC2019-20BEFF?logo=kaggle&logoColor=white)]()(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/))
+   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_FEDISIC2019-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nechbamohammed/fedbench-benchmarking-9-algorithms-on-fedisic2019)(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/fedbench-benchmarking-9-algorithms-on-fedisic2019))
 
 6. **FedBench: Benchmarking 9 Algorithms on SVHN**
  
-   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_SVHN-20BEFF?logo=kaggle&logoColor=white)]()(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/))
+   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_SVHN-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nechbamohammed/fedbench-benchmarking-9-algorithms-on-svhn)(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/fedbench-benchmarking-9-algorithms-on-svhn))
 
 7. **FedBench: Benchmarking 9 Algorithms on CINIC10**
  
-   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_CINIC10-20BEFF?logo=kaggle&logoColor=white)]()(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/))
+   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_CINIC10-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nechbamohammed/fedbench-benchmarking-9-algorithms-on-cinic10)(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/fedbench-benchmarking-9-algorithms-on-cinic10))
 
 8. **FedBench: Benchmarking 9 Algorithms on  FCUBE**
  
-   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_FCUBE-20BEFF?logo=kaggle&logoColor=white)]()(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/))
+   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_FCUBE-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nechbamohammed/fedbench-benchmarking-9-algorithms-on-fcube)(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/fedbench-benchmarking-9-algorithms-on-fcube))
 
 9. **FedBench: Benchmarking 9 Algorithms on FEMNIST**
  
-   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_FEMNIST-20BEFF?logo=kaggle&logoColor=white)]()(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/))
+   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_FEMNIST-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nechbamohammed/fedbench-benchmarking-9-algorithms-on-femnist)(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/fedbench-benchmarking-9-algorithms-on-femnist))
+
+9. **FedBench: Benchmarking 9 Algorithms on ADULT**
+ 
+   [![Kaggle](https://img.shields.io/badge/Kaggle-FedBench_ADULT-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nechbamohammed/fedbench-benchmarking-9-algorithms-on-adult)(or open the [Jupyter Notebook](https://github.com/NechbaMohammed/FLBenchmark/blob/main/notebooks/fedbench-benchmarking-9-algorithms-on-adult))
 
 ### Strategic Dataset Selection
 Choose datasets that match your strategic evaluation needs:
