@@ -1,13 +1,13 @@
 # Federated Learning Benchmark Framework
-
 <p align="center">
   <a href="https://nechbamohammed.github.io/FLBenchmarkUI/">
-    <img src="https://github.com/NechbaMohammed/FLBenchmarkUI/blob/main/images/logo.png" width="140px" alt="FedBench Website" />
+    <img src="https://github.com/NechbaMohammed/FLBenchmarkUI/blob/main/images/logo.png" width="220px" alt="FedBench Website" />
   </a>
 </p>
 <p align="center">
     <a href="https://nechbamohammed.github.io/FLBenchmarkUI/">Website</a> |
-    <a href="">Paper</a> 
+    <a href="">Paper</a> |
+    <a href="https://pepy.tech/projects/fedbench"><img src="https://static.pepy.tech/badge/fedbench" alt="PyPI Downloads"></a>
     <br /><br />
 </p>
 
