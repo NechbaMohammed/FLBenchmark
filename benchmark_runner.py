@@ -4,11 +4,11 @@ import time
 from collections import deque
 from typing import List
 
-MAX_PROCESSES_AT_ONCE = 8
+MAX_PROCESSES_AT_ONCE = 2
 
 rounds =50 # Number of rounds
-epochs = "10 20 30" # List Number of local epochs
-runs = 3 # Number of runs to execute
+epochs ="10 20 30" # List Number of local epochs
+runs =3 # Number of runs to execute
 num_clients = 10 # for all partitioning except cifar100 
 alpha = 0.5 # for dirichlet partitioning
 segma = 0.1 # for noise partitioning
@@ -22,7 +22,7 @@ learning_rate = 0.01 # for fednova and scaffold
 
 # Define the methods and datasets to run
 methods =["fedavg","fedprox","fedadagrad","fedadam","fedyogi","fednova","scaffold","moon","fedbn"] 
-datasets = ["mnist","fmnist", "cifar10","cifar100","svhn","cinic10","fedisic2019","adult", "fcube","femnist"]
+datasets = ["mnist","fmnist", "cifar10","svhn","cinic10","fedisic2019","adult", "fcube"]
 partitioning ={"mnist": ["label_quantity", "dirichlet", "iid_noniid", "noise", "iid"],
                "fmnist": ["label_quantity", "dirichlet", "iid_noniid", "noise", "iid"],
                 "svhn": ["label_quantity", "dirichlet", "iid_noniid", "noise", "iid"],
@@ -41,6 +41,10 @@ commands: deque = deque()
 
 for method in methods:
     for dataset in datasets:
+        if method=="fedavg" and (dataset=="mnist" or dataset=="fmnist" or dataset=="cifar10"):
+            continue
+        if method=="fedprox" and (dataset=="mnist" or dataset=="fmnist"):
+            continue
         if dataset == "cifar100":
             num_clients = 100
         else:
