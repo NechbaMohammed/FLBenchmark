@@ -21,13 +21,14 @@ from collections import OrderedDict,Counter
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
-login(token="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")
+#login(token="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")
 class FCubeDataset(Dataset):
     def __init__(self, hf_dataset):
         """
         Args:
             hf_dataset: A dictionary containing features and labels.
         """
+       # login(token="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")
         self.features = torch.stack([
             torch.tensor(hf_dataset['feature_1'], dtype=torch.float32),
             torch.tensor(hf_dataset['feature_2'], dtype=torch.float32),
