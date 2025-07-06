@@ -1,7 +1,7 @@
 # Federated Learning Benchmark Framework
 <p align="center">
   <a href="https://nechbamohammed.github.io/FLBenchmarkUI/">
-    <img src="https://github.com/NechbaMohammed/FLBenchmarkUI/blob/main/images/logo1.png" width="220px" alt="FedBench Website" />
+    <img src="https://github.com/NechbaMohammed/FLBenchmarkUI/blob/main/images/logo2.png" width="220px" alt="FedBench Website" />
   </a>
 </p>
 <p align="center">
