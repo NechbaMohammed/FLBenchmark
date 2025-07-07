@@ -67,7 +67,13 @@ def plot_local_epoch_comparison(epochs_data, output_path=None):
     plt.xticks([r + bar_width*(len(methods)/2 - 0.5) for r in range(len(local_epochs))], 
                local_epochs, fontsize=12)
     plt.yticks(fontsize=12)
-    plt.ylim(0, 1.05)
+    # Compute the maximum value among all accuracies
+    all_accuracies = [method_accuracies[m].get(epoch, 0) 
+                    for m in methods for epoch in local_epochs]
+    max_acc = max(all_accuracies)
+
+    # Set dynamic ylim with a bit of margin
+    plt.ylim(0, max(0.1, max_acc * 1.1))
     plt.legend(fontsize=10, bbox_to_anchor=(1.05, 1), loc='upper left')
     
     plt.tight_layout()
@@ -84,6 +90,16 @@ def main():
     agg_dir = "results/agg_experiments"
     plots_dir = "results/plots/local_epochs"
     os.makedirs(plots_dir, exist_ok=True)
+    d={"feature_distribution":"x",
+       "homogeneous_partition":"iid",
+       "label_distribution\\dirichlet\\alpha0.5":"pk",
+       "label_distribution\\label_quantity\\C1":"c1",
+       "label_distribution\\label_quantity\\C2":"c2",
+       "label_distribution\\label_quantity\\C3":"c3",
+       "quantity_skew":"q",
+       "synthetic_partition":"synthetic",
+
+       }
 
     # Find all aggregated CSV files
     csv_files = glob.glob(os.path.join(agg_dir, "**", "*.csv"), recursive=True)
@@ -117,7 +133,8 @@ def main():
         if len(unique_epochs) > 1:
             dataset = os.path.basename(experiment_key)
             partitioning = os.path.dirname(experiment_key)
-            plot_filename = f"{dataset}_local_epochs_comparison.pdf"
+            print(partitioning)
+            plot_filename = f"{dataset}_local_epochs_{d[partitioning]}.pdf"
             output_path = os.path.join(plots_dir, partitioning, plot_filename)
             
             plot_local_epoch_comparison(epochs_data, output_path)
